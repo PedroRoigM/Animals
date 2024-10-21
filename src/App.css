@@ -7,8 +7,7 @@ html {
 .Error{
   color:red;
   font-size: small;
-  text-align: left;
-  margin-left: 220px;
+
   display:none;
 }
 .aniamlsList {

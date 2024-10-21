@@ -15,7 +15,7 @@ export default function ListaDeMascotas({ filtro }) {
 
     const renderRows = () => {
         const filteredData = data.filter(element => {
-            if (filtro === "todos") return true;
+            if (filtro === "Todos") return true;
             return element.tipo.toLowerCase() === filtro.toLowerCase();
         });
 

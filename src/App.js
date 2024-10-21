@@ -18,7 +18,7 @@ function App() {
     sendData();
   }
   const sendData = () => {
-    // AQUI SE ENVIARÍA LA DATA AL BACKEND //
+    // AQUI SE ENVIARÍA LA DATA AL BACKEND // 
     console.log(data.nombre, data.mail, data.telefono);
   }
   return (

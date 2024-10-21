@@ -6,6 +6,7 @@ export default function Formulario( { animales, recibeData }){
         mail:"",
         telefono:""
     });
+    const errorFields = Array.from(document.getElementsByClassName('Error'));
     const handlerChange = (e, field) =>{
         setData({...data, [field]: e.target.value});
     }
@@ -13,8 +14,10 @@ export default function Formulario( { animales, recibeData }){
         animales(e.target.value);
     }
     const enviarData = () => {
-        for(let i = 0; i < 3; i++)
-            document.getElementsByClassName('Error')[i].style.display = 'none';
+        
+        errorFields.forEach(element => {
+            element.style.display = 'none';
+        });
         
         if (data.nombre && data.mail && data.telefono){
             recibeData(data);
@@ -27,11 +30,11 @@ export default function Formulario( { animales, recibeData }){
             resetInputs();
         }else{
             if(!data.nombre)
-                document.getElementsByClassName('Error')[0].style.display = 'block';
+                errorFields[0].style.display = 'block';
             if(!data.mail)
-                document.getElementsByClassName('Error')[1].style.display = 'block';
+                errorFields[1].style.display = 'block';
             if(!data.telefono)
-                document.getElementsByClassName('Error')[2].style.display = 'block';
+                errorFields[2].style.display = 'block';
         }
     }
     const resetInputs = () => {
