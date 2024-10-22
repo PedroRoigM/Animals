@@ -21,11 +21,6 @@ export default function Formulario( { animales, recibeData }){
         
         if (data.nombre && data.mail && data.telefono){
             recibeData(data);
-            setData({
-                nombre:"",
-                mail:"",
-                telefono:""
-            });
 
             resetInputs();
         }else{

@@ -14,7 +14,8 @@ function App() {
     setOption(option);
   }
   const getData = (data) => {
-    setData(data); 
+    alert(data)
+    setData({"nombre": data.nombre, "mail": data.mail, "telefono": data.telefono}); 
     sendData();
   }
   const sendData = () => {
